@@ -78,15 +78,15 @@ Lépések:
    * Válaszd a Bash-t!
 2. A következő panelen válaszd a "Tárfiók csatlakoztatása" lehetőséget
    * Egyúttal válaszd ki az **"Obudai.Egyetem.Gyakorlat.1"**-t "Tárfiók-előfizetés"-nek!
-   [![Azure console 01](./img/portal_console.png)](./img/portal_console_new01.png)
+   [![Azure console 01](./img/portal_console_new_01.png)](./img/portal_console_new_01.png)
 3. A "Tárfiók csatlakoztatása" panelen válaszd a "Meglévőt tárfiók kiválasztása" lehetőséget!
-   [![Azure console 01](./img/portal_console.png)](./img/portal_console_new02.png)
+   [![Azure console 02](./img/portal_console_new_02.png)](./img/portal_console_new_02.png)
 4. A Tárfiók kiválasztása panel esetén az alábbi beallítások szükségesek:
    * Előfizetés: **"Obudai.Egyetem.Gyakorlat.1"**
    * Erőforráscsoport: **"CloudShell"**
    * Tárfiók neve: **"oecloudshell2"**
    * Fájlmegosztás: **"oecloudshell2"**
-   [![Azure console 01](./img/portal_console.png)](./img/portal_console_new03.png)
+   [![Azure console 03](./img/portal_console_new_03.png)](./img/portal_console_new_03.png)
 
 ## Manifest-ek letöltése
 A szükséges file-ok ebben a git repository-ban vannak, így ezeket le kell töltenünk a consolba a következő paranccsal:
