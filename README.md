@@ -70,25 +70,34 @@ Az AKS clusterre kattintva látható, hogy milyen alkalmazások futnak jelenleg 
 
 [![AKS workload](./img/AKS_workload.png)](./img/AKS_workload.png)
 
-## Cloud shell megnyitása
+## Cloud shell megnyitása és konfigurálása
 Ahhoz, hogy új container-eket hozhassunk létre, csatlakoznunk kell az AKS cluster-hez. A portálon a jobb felső sarkában található egy konzol ikon, ami előhív egy webes konzolt.
 
 Lépések:
 1. Kattints a konzol ikonra a jobb felső sarokban. Alul megjelenik egy új panel.
-   * Válaszd a Bash-t
-   * Válaszd majd a "Speciális beállítások megjelenítését"
-2. Az Erőforráscsoportnál (Resource Group) válaszd a "Meglévőt" és válaszd ki a **"CloudShell"**-t
-3. A Tárfióknál (Storage Account) válaszd szintén a "Meglévőt" és válaszd ki a **"oecloudshell"**-t
-4. A Filemegosztásnál (FileShare) válaszd az újat és add meg a neved vagy a felhasználóneved.
-5. Végül a "Tároló létrehozása" gombbal létrejön a saját könyvtárunk és elindul a konzol.
+   * Válaszd a Bash-t!
+2. A következő panelen válaszd a "Tárfiók csatlakoztatása" lehetőséget
+   * Egyúttal válaszd ki az **"Obudai.Egyetem.Gyakorlat.1"**-t "Tárfiók-előfizetés"-nek!
+     
+[![Azure console 01](./img/portal_console.png)](./img/portal_console_new_01.png)
 
-[![Azure console](./img/portal_console.png)](./img/portal_console.png)
+3. A "Tárfiók csatlakoztatása" panelen válaszd a "Meglévőt tárfiók kiválasztása" lehetőséget!
+
+[![Azure console 01](./img/portal_console.png)](./img/portal_console_new_02.png)
+
+4. A Tárfiók kiválasztása panel esetén az alábbi beallítások szükségesek:
+   * Előfizetés: **"Obudai.Egyetem.Gyakorlat.1"**
+   * Erőforráscsoport: **"CloudShell"**
+   * Tárfiók neve: **"oecloudshell2"**
+   * Fájlmegosztás: **"oecloudshell2"**
+
+[![Azure console 01](./img/portal_console.png)](./img/portal_console_new_03.png)
 
 ## Manifest-ek letöltése
 A szükséges file-ok ebben a git repository-ban vannak, így ezeket le kell töltenünk a consolba a következő paranccsal:
 
 ```bash
-git clone https://github.com/szasza576/oe-microservice.git
+git clone https://github.com/miam/oe-microservice.git
 ```
 
 Amint letöltődtek a fájlok lépjünk be a könyvtárba:
@@ -132,7 +141,7 @@ kubectl get pods -n boutique
 ```
 
 ## Alkalmazás elérése
-Az alkalmazás egyik komponensét (frontend) úgy tervezték, hogy az interneten elérhető legyen. Ezért a hozzá tartozó manifest file automatikusan létrehoz egy publikus IP-t. Ezt szintén az AKS cluster oldalán találhatjuk a "Szolgáltatások és bejövő forgalom" (Services and Ingresses) fülön belül a "Szolgáltatások" (Services) alatt. Érdemes lehet a "Névtér" (Namespace) szűrőt boutique-ra állítani. 
+Az alkalmazás egyik komponensét (frontend) úgy tervezték, hogy az interneten elérhető legyen. Ezért a hozzá tartozó manifest file automatikusan létrehoz egy publikus IP-t. Ezt szintén az AKS cluster oldalán találhatjuk a "Szolgáltatások és bejövő forgalom" (Services and Ingresses) fülön belül a "Szolgáltatások" (Services) alatt. Érdemes lehet a "Névtér" (Namespace) szűrőt boutique-ra állítani.
 
 [![External IP](./img/external_IP.png)](./img/external_IP.png)
 
