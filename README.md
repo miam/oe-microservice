@@ -70,17 +70,20 @@ Az AKS clusterre kattintva látható, hogy milyen alkalmazások futnak jelenleg 
 
 [![AKS workload](./img/AKS_workload.png)](./img/AKS_workload.png)
 
-## Cloud shell megnyitása
+## Cloud shell megnyitása és konfigurálása
 Ahhoz, hogy új container-eket hozhassunk létre, csatlakoznunk kell az AKS cluster-hez. A portálon a jobb felső sarkában található egy konzol ikon, ami előhív egy webes konzolt.
 
 Lépések:
 1. Kattints a konzol ikonra a jobb felső sarokban. Alul megjelenik egy új panel.
-   * Válaszd a Bash-t
-   * Válaszd majd a "Speciális beállítások megjelenítését"
-2. Az Erőforráscsoportnál (Resource Group) válaszd a "Meglévőt" és válaszd ki a **"CloudShell"**-t
-3. A Tárfióknál (Storage Account) válaszd szintén a "Meglévőt" és válaszd ki a **"oecloudshell"**-t
-4. A Filemegosztásnál (FileShare) válaszd az újat és add meg a neved vagy a felhasználóneved.
-5. Végül a "Tároló létrehozása" gombbal létrejön a saját könyvtárunk és elindul a konzol.
+   * Válaszd a Bash-t!
+2. A következő panelen válaszd a "Tárfiók csatlakoztatása" lehetőséget
+   * Egyúttal válaszd ki az **"Obudai.Egyetem.Gyakorlat.1"**-t "Tárfiók-előfizetés"-nek!
+3. A "Tárfiók csatlakoztatása" panelen válaszd a "Meglévőt tárfiók kiválasztása" lehetőséget!
+4. A Tárfiók kiválasztása panel esetén az alábbi beallítások szükségesek:
+   * Előfizetés: **"Obudai.Egyetem.Gyakorlat.1"**
+   * Erőforráscsoport: **"CloudShell"**
+   * Tárfiók neve: **"oecloudshell2"**
+   * Fájlmegosztás: **"oecloudshell2"**
 
 [![Azure console](./img/portal_console.png)](./img/portal_console.png)
 
