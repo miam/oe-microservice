@@ -88,7 +88,7 @@ Lépések:
 A szükséges file-ok ebben a git repository-ban vannak, így ezeket le kell töltenünk a consolba a következő paranccsal:
 
 ```bash
-git clone https://github.com/szasza576/oe-microservice.git
+git clone https://github.com/miam/oe-microservice.git
 ```
 
 Amint letöltődtek a fájlok lépjünk be a könyvtárba:
@@ -132,7 +132,7 @@ kubectl get pods -n boutique
 ```
 
 ## Alkalmazás elérése
-Az alkalmazás egyik komponensét (frontend) úgy tervezték, hogy az interneten elérhető legyen. Ezért a hozzá tartozó manifest file automatikusan létrehoz egy publikus IP-t. Ezt szintén az AKS cluster oldalán találhatjuk a "Szolgáltatások és bejövő forgalom" (Services and Ingresses) fülön belül a "Szolgáltatások" (Services) alatt. Érdemes lehet a "Névtér" (Namespace) szűrőt boutique-ra állítani. 
+Az alkalmazás egyik komponensét (frontend) úgy tervezték, hogy az interneten elérhető legyen. Ezért a hozzá tartozó manifest file automatikusan létrehoz egy publikus IP-t. Ezt szintén az AKS cluster oldalán találhatjuk a "Szolgáltatások és bejövő forgalom" (Services and Ingresses) fülön belül a "Szolgáltatások" (Services) alatt. Érdemes lehet a "Névtér" (Namespace) szűrőt boutique-ra állítani.
 
 [![External IP](./img/external_IP.png)](./img/external_IP.png)
 
