@@ -56,9 +56,9 @@ A gyakorlathoz Azure környezetet fogunk használni és 4 fős csoportokban dolg
 Böngészőben nyisd meg az Azure Portal-t: https://portal.azure.com/
 
 Belépéshez használd az egyik devops user-t, ami az órán kerül kiosztásra.
-Ilyen formátumban add meg:
+Ilyen formátumban add meg (az XX integer, ahogy a Hallgató oszlopban látható):
 ```
-devops25@aztechnaccoutlook.onmicrosoft.com
+devopsXX@aztechnaccoutlook.onmicrosoft.com
 ```
 
 A felhasználóhoz tartozó jelszó szintén az órán kerül kiosztásra.
@@ -76,17 +76,9 @@ Ahhoz, hogy új container-eket hozhassunk létre, csatlakoznunk kell az AKS clus
 Lépések:
 1. Kattints a konzol ikonra a jobb felső sarokban. Alul megjelenik egy új panel.
    * Válaszd a Bash-t!
-2. A következő panelen válaszd a "Tárfiók csatlakoztatása" lehetőséget
-   * Egyúttal válaszd ki az **"Obudai.Egyetem.Gyakorlat.1"**-t "Tárfiók-előfizetés"-nek!
-   [![Azure console 01](./img/portal_console_new_01.png)](./img/portal_console_new_01.png)
-3. A "Tárfiók csatlakoztatása" panelen válaszd a "Meglévőt tárfiók kiválasztása" lehetőséget!
-   [![Azure console 02](./img/portal_console_new_02.png)](./img/portal_console_new_02.png)
-4. A Tárfiók kiválasztása panel esetén az alábbi beallítások szükségesek:
-   * Előfizetés: **"Obudai.Egyetem.Gyakorlat.1"**
-   * Erőforráscsoport: **"CloudShell"**
-   * Tárfiók neve: **"oecloudshell2"**
-   * Fájlmegosztás: **"oecloudshell2"**
-   [![Azure console 03](./img/portal_console_new_03.png)](./img/portal_console_new_03.png)
+   [![Azure console bash](./img/portal_console_bash.png)](./img/portal_console_new_01.png)
+2. A következő panelen válaszd a **"No storage account required"** lehetőséget, majd kattints az **"Apply"**-ra:
+   [![Azure console no storage](./img/portal_console_no_storage.png)](./img/portal_console_new_01.png)
 
 ## Manifest-ek letöltése
 A szükséges file-ok ebben a git repository-ban vannak, így ezeket le kell töltenünk a consolba a következő paranccsal:
